@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'MyFont';
   src: url('./fonts/minecraft.woff2') format('woff2');
-  font-weight: 100 900;  /* поддержка всех весов, или укажи конкретный: 400 */
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -24,11 +24,16 @@
   --foreground: 245 245 245;
 }
 
+/* ИСПРАВЛЕНИЕ: Запрещаем горизонтальный скролл */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Применяем шрифт ко всему */
 body {
   font-family: var(--font-custom);
   color: rgb(var(--foreground));
@@ -36,26 +41,26 @@ body {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Убедимся что все элементы используют этот шрифт */
 * {
   font-family: inherit;
 }
 
-/* Кроме кода - там моноширинный */
 code, pre, kbd, samp {
   font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 }
 
-/* Остальные стили... */
+/* ИСПРАВЛЕНИЕ: Перенос слов по словам, не по буквам */
 * {
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .mdx-content {
-  word-wrap: break-word;
   overflow-wrap: break-word;
-  word-break: break-word;
+  word-break: normal;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   max-width: 100%;
 }
 
@@ -64,10 +69,7 @@ code, pre, kbd, samp {
   max-width: 100%;
 }
 
-.mdx-content code {
-  word-break: break-all;
-}
-
+/* Скроллбар */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

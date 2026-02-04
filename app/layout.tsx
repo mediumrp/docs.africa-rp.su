@@ -7,9 +7,6 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Документация Africa RP',
   description: 'Официальная документация проекта',
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function RootLayout({
@@ -19,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body className="min-h-screen bg-white dark:bg-gray-950">
         <ThemeProvider>
           <AppLayout>

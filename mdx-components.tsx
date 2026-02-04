@@ -131,7 +131,7 @@ function slugify(text: string): string {
 function Heading1({ children }: { children?: React.ReactNode }) {
   const id = slugify(String(children));
   return (
-    <h1 id={id} className="text-5xl font-extrabold text-gray-900 dark:text-white mb-8 mt-8 first:mt-0 scroll-mt-20 break-words leading-tight">
+    <h1 id={id} className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 sm:mb-8 mt-6 sm:mt-8 first:mt-0 scroll-mt-20 leading-tight hyphens-auto">
       {children}
     </h1>
   );
@@ -140,7 +140,7 @@ function Heading1({ children }: { children?: React.ReactNode }) {
 function Heading2({ children }: { children?: React.ReactNode }) {
   const id = slugify(String(children));
   return (
-    <h2 id={id} className="text-3xl font-bold text-gray-900 dark:text-white mb-4 mt-12 pb-2 border-b border-gray-200 dark:border-gray-700 scroll-mt-20 break-words">
+    <h2 id={id} className="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 mt-8 sm:mt-12 pb-2 border-b border-gray-200 dark:border-gray-700 scroll-mt-20 hyphens-auto">
       {children}
     </h2>
   );
@@ -149,7 +149,7 @@ function Heading2({ children }: { children?: React.ReactNode }) {
 function Heading3({ children }: { children?: React.ReactNode }) {
   const id = slugify(String(children));
   return (
-    <h3 id={id} className="text-2xl font-semibold text-gray-900 dark:text-white mb-3 mt-8 scroll-mt-20 break-words">
+    <h3 id={id} className="text-xl sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 mt-6 sm:mt-8 scroll-mt-20 hyphens-auto">
       {children}
     </h3>
   );
@@ -158,7 +158,7 @@ function Heading3({ children }: { children?: React.ReactNode }) {
 function Heading4({ children }: { children?: React.ReactNode }) {
   const id = slugify(String(children));
   return (
-    <h4 id={id} className="text-xl font-semibold text-gray-900 dark:text-white mb-2 mt-6 scroll-mt-20 break-words">
+    <h4 id={id} className="text-lg sm:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white mb-2 mt-4 sm:mt-6 scroll-mt-20 hyphens-auto">
       {children}
     </h4>
   );
